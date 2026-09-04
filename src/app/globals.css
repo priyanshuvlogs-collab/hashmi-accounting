@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #10233d;
+  --ink-deep: #0a182c;
+  --paper: #f6f1e8;
+  --paper-2: #efe8db;
+  --brass: #b08a45;
+  --brass-light: #d4b56a;
+  --charcoal: #2c2722;
+  --muted: #5c564e;
+  --line: #d9d0c2;
+  --ok: #2f5d3a;
+  --err: #8b2e2e;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-deep: var(--ink-deep);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-brass: var(--brass);
+  --color-brass-light: var(--brass-light);
+  --color-charcoal: var(--charcoal);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-ok: var(--ok);
+  --color-err: var(--err);
+  --font-sans: var(--font-source-sans);
+  --font-serif: var(--font-source-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--charcoal);
+  font-family: var(--font-source-sans), ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+.serif {
+  font-family: var(--font-source-serif), ui-serif, Georgia, serif;
+}
+
+::selection {
+  background: #d4b56a55;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 80;
+  background: var(--ink);
+  color: white;
+  padding: 0.5rem 0.85rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
